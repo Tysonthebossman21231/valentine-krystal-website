@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will you be my Valentine, Krystal?</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ffb6c1; /* Soft pink background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #ff66b2; /* Light pink text color */
+    }
+    .container {
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+    h1 {
+      font-size: 3em;
+      animation: moveUp 1s ease-in-out forwards;
+      font-family: 'Comic Sans MS', sans-serif; /* Fun font for Hello Kitty theme */
+      color: #ff66b2; /* Light pink for the title */
+    }
+    .answer {
+      font-size: 2em;
+      color: #f9d3d3;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+    .answer:hover {
+      color: #ff3399; /* Darker pink for hover effect */
+    }
+    .kitty {
+      width: 100px;
+      margin-top: 20px;
+      animation: bounce 1s infinite alternate;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes moveUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes bounce {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Will you be my Valentine, Krystal?</h1>
+    <img class="kitty" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Hello_Kitty_Character_2019.svg/1200px-Hello_Kitty_Character_2019.svg.png" alt="Hello Kitty">
+    <p class="answer" onclick="answerYes()">Yes! 💖</p>
+    <p class="answer" onclick="answerNo()">No... 😢</p>
+  </div>
+
+  <script>
+    function answerYes() {
+      document.querySelector('h1').innerText = "Yay! I’m so happy! 💕";
+      document.querySelector('.answer').style.display = 'none';
+      document.querySelectorAll('.answer')[1].style.display = 'none';
+    }
+
+    function answerNo() {
+      document.querySelector('h1').innerText = "Oh no... 😢 Maybe next time!";
+      document.querySelector('.answer').style.display = 'none';
+      document.querySelectorAll('.answer')[1].style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
